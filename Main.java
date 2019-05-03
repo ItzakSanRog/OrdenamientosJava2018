@@ -17,16 +17,18 @@ public class Main {
         //Usar:     Nombre del arreglo = shell.ordenar(data2,(data.length/2));
         OrdenamientoMerge merge = new OrdenamientoMerge();
 
-        System.out.println("Que tipo de datos utlizar"
+        System.out.println("Que tipo de datos utlizar\n"
                 + "1.-100 elementos al azar\n"
                 + "2.-50,000 elementos al azar\n"
                 + "3.-100,000 elementos al azar\n"
                 + "4.-100,000 elementos ordenados en orden inverso\n"
                 + "5.-100,000 elementos ordenados\n"
-                + "6.-100,000 elementos que sólo pueden ser números entre el 1 y el 5");
+                + "6.-100,000 elementos que sólo pueden ser números entre el 1 y el 5\n"
+                + "7.- 500 datos aleatoreos");
+
         menu1 = sc.nextInt();
 
-        System.out.println("Que tipo de ordenameiento utlizar"
+        System.out.println("Que tipo de ordenameiento utlizar\n"
                 + "1.-Burbuja\n"
                 + "2.-Selection\n"
                 + "3.-Insertion\n"
@@ -81,6 +83,13 @@ public class Main {
                 arreglo = new int[100000];
                 for (int i = 0; i < 100000; i++) {
                     int random = (int) ((Math.random() * 5) + 1);
+                    arreglo[i] = random;
+                }
+                break;
+            case 7:
+                arreglo = new int[500];
+                for (int i = 0; i < 500; i++) {
+                    int random = (int) ((Math.random() * 100) + 1);
                     arreglo[i] = random;
                 }
                 break;
